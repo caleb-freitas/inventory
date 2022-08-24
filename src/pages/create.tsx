@@ -3,7 +3,7 @@ import { trpc } from "../utils/trpc"
 const CreateItemForm = () => {
   const { mutate, data, isLoading } = trpc.useMutation(["item.create"])
 
-  if (!data) {
+  if (!data || isLoading) {
     return <div>Loading...</div>
   }
 
