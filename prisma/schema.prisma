@@ -11,6 +11,17 @@ model Item {
   id        String   @id @default(cuid())
   name      String   @unique(sort: Asc)
   quantity  Int
+  serviceId String?
+  service   Service? @relation(fields: [serviceId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Service {
+  id        String   @id @default(cuid())
+  name      String
+  price     Float
+  items     Item[]
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
