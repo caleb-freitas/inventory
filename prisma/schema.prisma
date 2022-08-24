@@ -9,11 +9,10 @@ datasource db {
 
 model Item {
   id        String   @id @default(cuid())
-  name      String
+  name      String   @unique
   quantity  Int
   createdAt DateTime @default(now())
   updatedAt DateTime @default(now()) @updatedAt
 
   @@index(fields: [name(sort: Asc)])
-  @@map("items")
 }
