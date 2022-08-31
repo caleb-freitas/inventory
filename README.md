@@ -14,3 +14,6 @@ Project in progress...
 - [Prisma](https://prisma.io)
 - [TailwindCSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
+
+
+https://medium.com/analytics-vidhya/how-to-create-a-fuzzy-search-in-react-js-using-fuse-js-859f80345657
